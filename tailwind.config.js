@@ -21,6 +21,10 @@ module.exports = {
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"],
       },
+      backgroundImage: {
+        desktop: "url('/assets/images/bg-sidebar-desktop.svg')",
+        mobile: "url('/assets/images/bg-sidebar-mobile.svg')",
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,9 @@
+<div class="flex gap-5 p-5 items-center" (click)="setColor.emit(item)">
+  <div>
+    <span class="rounded-full px-5 py-3 border-2" [ngClass]="item.active ? 'bg-lightblue' : ''">{{item.order}}</span>
+  </div>
+  <div>
+    <p class="text-sm">{{ item.title }}</p>
+    <p class="text-alabaster font-medium">{{ item.description }}</p>
+  </div>
+</div>
