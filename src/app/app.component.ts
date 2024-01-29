@@ -6,9 +6,6 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<h1 class="text-3xl font-ubuntu">Personal info</h1>`,
 })
-export class AppComponent {
-  title = 'ng-multi-step-form';
-}
+export class AppComponent {}
