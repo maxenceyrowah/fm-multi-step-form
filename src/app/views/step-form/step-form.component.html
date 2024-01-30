@@ -1,19 +1,23 @@
 <div class="bg-magnolia h-screen">
-  <div class="w-4/6 m-auto bg-whiteNeutral shadow-lg rounded-lg h-4/5 relative top-[5rem] flex p-5 gap-5">
-    <div class="bg-desktop bg-no-repeat bg-contain basis-2/6 p-5">
+  <div class="w-3/6 m-auto bg-whiteNeutral shadow-lg rounded-lg relative top-40 flex p-3 gap-5 flex-col md:flex-row">
+    <div class="bg-mobile md:bg-desktop bg-no-repeat bg-contain basis-2/6 p-5 relative">
       <app-step-item *ngFor="let step of steps" [item]="step" (setColor)="setActiveStep($event)" />
     </div>
 
-    <div class="basis-4/6 p-10">
-      <h1 class="font-ubuntu text-3xl font-bold">Personal info</h1>
-      <span>
+    <div class="basis-4/6 p-10 h-full">
+      <h1 class="font-ubuntu text-4xl font-bold mb-2 text-marineBlue">Personal info</h1>
+      <span class="text-coolGray">
         Please provide your name, email address, and phone number.
       </span>
 
-      <div *ngIf="activeStep === 1">Step {{ activeStep }}</div>
-      <div *ngIf="activeStep === 2">Step {{ activeStep }}</div>
-      <div *ngIf="activeStep === 3">Step {{ activeStep }}</div>
-      <div *ngIf="activeStep === 4">Step {{ activeStep }}</div>
+      <div class="mt-5 h-full">
+        <form>
+          <app-personal-step [step]="activeStep" />
+          <app-plan-step [step]="activeStep" />
+          <app-add-ons-step [step]="activeStep" />
+          <app-summary-step [step]="activeStep" />
+        </form>
+      </div>
     </div>
   </div>
 </div>
